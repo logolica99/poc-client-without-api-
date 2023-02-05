@@ -1,0 +1,64 @@
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.withoutNav {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+@media (min-width: 64em) {
+  .withoutNav {
+    padding-top: 10vh;
+  }
+}
+
+.navPush {
+  margin-top: 230px;
+}
+
+.allcourses-hero {
+  width: 60%;
+  margin: auto;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+@media (max-width: 63.9375em) {
+  .allcourses-hero {
+    width: 90%;
+    margin-top: 5vh;
+  }
+}
+
+.allcourses-hero > h1 {
+  color: #00A9DC;
+  font-size: 100px;
+}
+
+@media (max-width: 63.9375em) {
+  .allcourses-hero > h1 {
+    font-size: 32px;
+  }
+}
+
+.allcourses-hero > p {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 63.9375em) {
+  .allcourses-hero > p {
+    font-size: 17px;
+  }
+}
+/*# sourceMappingURL=allcourses.module.css.map */

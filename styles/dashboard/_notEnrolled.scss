@@ -1,0 +1,53 @@
+.notEnrolled {
+
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  border-radius: 60px;
+  display: flex;
+  margin-bottom: 80px;
+
+  justify-content: space-between;
+  padding: 30px;
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &-title {
+    > h2 {
+      margin-top: 10%;
+      margin-bottom: 5%;
+      @include breakpoint-down(medium) {
+        margin-top: 4%;
+      }
+    }
+    > p {
+      font-weight: 500;
+    }
+    &-button {
+      cursor: pointer;
+      display: flex;
+      margin-top: 10%;
+      @include breakpoint-down(medium) {
+        margin-bottom: 10%;
+        justify-content: center;
+      }
+
+      > p {
+        color: white;
+        font-weight: 700;
+        border-radius: 30px;
+        padding: 10px 40px;
+        background: linear-gradient(90deg, #20d7fc 0%, #1371b9 100%);
+      }
+    }
+  }
+  &-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: 70%;
+    }
+  }
+}

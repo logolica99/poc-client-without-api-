@@ -1,0 +1,60 @@
+.subjectCourses {
+  width: 90%;
+  margin: auto;
+  margin-top: 9vh;
+  @include breakpoint-down(medium) {
+    margin-top: 5vh;
+  }
+  &-title {
+    width: 40%;
+    @include breakpoint-down(medium) {
+      width: 70%;
+    }
+    &-course {
+      display: inline;
+
+      font-weight: 700;
+      font-size: 20px;
+
+      color: white;
+      background-color: #00a9dc;
+      border: 1px solid #00a9dc;
+      padding: 4px 40px;
+      border-radius: 20px;
+      transition: all 300ms ease-in-out;
+
+      @include breakpoint-down(medium) {
+        padding: 6px 20px;
+        font-size: 12px;
+      }
+    }
+    > h2 {
+      margin-top: 30px;
+      font-size: 40px;
+      @include breakpoint-down(medium) {
+        font-size: 26px;
+        margin-top: 20px;
+      }
+    }
+    &-content {
+      font-size: 18px;
+      margin-top: 20px;
+      @include breakpoint-down(medium) {
+        font-size: 12px;
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &-contents {
+    margin-top: 40px;
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 60px;
+    @include breakpoint-down(small) {
+      justify-content: center;
+    }
+  }
+}

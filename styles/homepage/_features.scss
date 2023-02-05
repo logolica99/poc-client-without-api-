@@ -1,0 +1,84 @@
+.features {
+  &-title {
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 80px;
+    @include breakpoint-down(medium) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    > h2 {
+      color: #00A9DC;
+      font-size: 50px;
+      
+      @include breakpoint-down(medium) {
+        font-size: 24px;
+      }
+
+    }
+    p {
+      margin: 20px 20%;
+      @include breakpoint-down(medium) {
+        margin: 20px 20px;
+      }
+    }
+  }
+
+  &-cards {
+      display: flex;
+     width: 70%;
+     margin:20px auto;
+     @include breakpoint-down(medium){
+        
+        width: 90%;
+    }
+    &-single {
+        padding:20px;
+        display: flex;
+        align-items: center;
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            align-items: flex-start;
+            padding:10px;
+           
+            
+        }
+      > img {
+        @media (max-width:1200px) {
+           width: 120px;
+        }
+        @include breakpoint-down(medium){
+            width: 60px;
+        }
+      }
+      &-text {
+          margin-left: 20px;
+          @include breakpoint-down(medium){
+            margin-left: 0px;
+            
+        }
+        > h3 {
+            color: #00A9DC;
+            font-size: 30px;
+            @media (max-width:1200px) {
+                font-size: 25px;
+            }
+            @include breakpoint-down(medium){
+                font-size: 20px;
+                margin: 16px 0px;
+            }
+        }
+        > p {
+            margin-top: 20px;
+            @media (max-width:1200px) {
+                margin-top: 10px;
+            }
+            @include breakpoint-down(medium){
+                font-size: 12px;
+            }
+        }
+      }
+    }
+  }
+}

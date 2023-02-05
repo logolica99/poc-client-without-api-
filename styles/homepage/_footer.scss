@@ -1,0 +1,133 @@
+.footer {
+  background-color: #001b35;
+  margin-top: 10vh;
+
+
+  &-container {
+    padding: 80px 8%;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 25px;
+    }
+    &-left {
+      flex: 1;
+      &-logo {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        > img {
+          width: 60px;
+          @include breakpoint-down(medium) {
+            width: 40px;
+          }
+        }
+        > h1 {
+          margin-left: 20px;
+          font-size: 26px;
+          line-height: 22px;
+          font-weight: 300;
+          color: white;
+          > span {
+            display: block;
+            font-weight: bold;
+            color: #00A9DC;
+          }
+          @media (max-width: 1120px) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+      }
+      > p {
+        margin: 30px 0px;
+        color: white;
+      }
+      &-socials {
+        > img {
+          width: 40px;
+          cursor: pointer;
+        }
+        > img:not(:nth-child(1)) {
+          margin-right: 20px;
+        }
+        > img:nth-child(2) {
+          margin-left: 20px;
+        }
+      }
+    }
+    &-middle {
+      flex: 1;
+      display: flex;
+      justify-content: space-evenly;
+
+      @include breakpoint-down(medium) {
+        margin: 20px 0px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      > ul {
+        list-style: none;
+        > li {
+          color: white;
+          margin: 10px 0px;
+          cursor: pointer;
+          @include breakpoint-down(medium) {
+            margin: 20px 0px;
+          }
+        }
+        >li:hover{
+          color:#00A9DC;
+        }
+      }
+      > ul:first-child {
+        @include breakpoint-down(medium) {
+          margin-right: 100px;
+        }
+      }
+    }
+    &-right {
+      flex: 1;
+      > ul {
+        list-style: none;
+        > li {
+          display: flex;
+          align-items: center;
+          margin: 10px 0px;
+          > img {
+            width: 40px;
+            @include breakpoint-down(medium){
+                width: 30px;
+            }
+          }
+          > p {
+            color: white;
+            margin-left: 20px;
+          }
+        }
+        >li:first-child{
+            color:white;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  &-end{
+      color: white;
+      text-align: center;
+      padding-bottom: 20px;
+      >p{
+
+          >a{
+              color:#00A9DC;
+          }
+      }
+  }
+}

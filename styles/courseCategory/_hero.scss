@@ -1,0 +1,33 @@
+.courseCategory{
+    &-hero{
+        width: 60%;
+        margin: auto;
+        margin-top: 10vh;
+        text-align: center;
+        margin-bottom: 10vh;
+        @include breakpoint-down(medium){
+            width: 90%;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+        >h1{
+            color: #00A9DC;
+            font-size: 100px;
+            @include breakpoint-down(medium){
+                font-size: 40px;
+            }
+        
+        }   
+        >p{
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: 400;
+            @include breakpoint-down(medium){
+                font-size: 18px;
+               
+            }
+
+        }
+
+    }
+}

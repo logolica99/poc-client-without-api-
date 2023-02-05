@@ -1,0 +1,105 @@
+.desktopNav{
+    
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left{
+        display: flex;
+        align-items: center;
+        >p{
+            cursor: pointer;
+            font-weight: 500;
+            margin-right: 100px;
+        }
+
+        &-browse{
+            margin-right: 50px;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            >p{
+               font-weight: 500;
+            }
+            >img{
+                margin-left: 10px;
+                width: 12px;
+            }
+        }
+        &-search{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #F6F7F8;
+            width: 340px;
+            padding-left: 20px;
+            border-radius: 40px;
+            >input{
+                border-radius: 40px;
+               padding-left: 10px;
+                width: 230px;
+                background-color: #F6F7F8;
+                border:none;
+            }
+            >input::placeholder{
+                color: black;
+                font-weight: 400;
+            }
+            &-img{
+                cursor: pointer;
+                display: flex;
+                background-color: #00A9DC;
+                border-radius: 40px;
+                padding: 10px 30px;
+                
+                >img{
+                    width: 20px;
+                }
+            }
+        }
+
+    }
+    &-right{
+        
+        display: flex;
+        align-items: center;
+        >img{
+            width: 40px;
+            cursor: pointer;
+        }
+        &-profile{
+         
+            cursor: pointer;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            position:relative;
+            >img{
+                width: 40px;
+                border-radius: 50%;
+                margin:0px 40px;
+        
+            }
+            >p{
+
+                position: absolute;
+                
+            }
+            >p:nth-child(2){
+                color:#383838;
+                font-weight: 700;
+                text-align: center;
+                white-space: nowrap;
+                top:50px;   
+            }
+            >p:last-child{
+                color:#C5C9CE;
+                font-weight: 700;
+                top:75px;
+            }
+        }
+
+    }
+}

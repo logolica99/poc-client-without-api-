@@ -1,0 +1,29 @@
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.withoutNav {
+  transition: all 300ms ease-in-out;
+  padding-top: 6vh;
+  @include breakpoint-up(large) {
+    padding-top: 10vh;
+  }
+}
+
+.navPush {
+  margin-top: 230px;
+}
+.sideNavPush{
+  margin-left: 6vw;
+  @include breakpoint-down(medium){
+    margin-left: 0vw;
+  }
+}

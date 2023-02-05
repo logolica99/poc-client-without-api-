@@ -1,0 +1,393 @@
+.courseBody {
+  display: grid;
+  width: 90%;
+  margin: auto;
+
+  &-title {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    @include breakpoint-down(medium) {
+      grid-row: 2;
+      grid-column: 1;
+    }
+    @include breakpoint-down(medium) {
+      margin-top: 20px;
+    }
+    > h2 {
+      color: #383838;
+      font-weight: 700;
+      @include breakpoint-down(medium) {
+        font-size: 24px;
+      }
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+
+      > p {
+        color: #c5c9ce;
+        font-weight: 700;
+        @include breakpoint-down(medium) {
+          font-size: 12px;
+        }
+      }
+      > ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+
+        > li {
+          margin-left: 10px;
+          @include breakpoint-down(medium) {
+            font-size: 12px;
+            margin-left: 6px;
+          }
+        }
+
+        > li:first-child {
+          color: #383838;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+        }
+        > li:last-child {
+          color: #00a9dc;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
+        }
+        > li:last-child:hover {
+          opacity: 0.5;
+        }
+        > li::before {
+          content: "\2022";
+          color: #383838;
+          font-weight: bold;
+          display: inline-block;
+
+          margin-right: 10px;
+          font-size: 30px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2px;
+          @include breakpoint-down(medium) {
+            margin-right: 6px;
+            margin-bottom: 2px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  &-costing {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    @include breakpoint-down(medium) {
+      grid-row: 6;
+      grid-column: 1;
+    }
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint-down(medium) {
+      justify-content: center;
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+      background-color: #f6f7f8;
+      border-radius: 40px;
+      > p {
+        font-size: 16px;
+        margin-left: 20px;
+        color: #fd5183;
+        text-decoration: line-through;
+      }
+      > h4 {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #50cb88;
+      }
+      &-button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90deg, #20d7fc 0%, #1371b9 100%);
+        padding: 4px 20px;
+        border-radius: 50px;
+        transition: all 200ms ease-in-out;
+
+        > p {
+          font-weight: bold;
+          color: white;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          > img {
+            width: 20px;
+            margin-left: 10px;
+          }
+        }
+      }
+      &-button:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &-buttons {
+      > img {
+        width: 29px;
+        height: 20px;
+        @include breakpoint-down(medium) {
+          display: none;
+        }
+      }
+      > img:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+  &-video {
+    grid-row: 3;
+    grid-column: 1;
+    @include breakpoint-down(medium) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    > img {
+      width: 100%;
+      @include breakpoint-down(medium) {
+        width: 100%;
+      }
+    }
+  }
+  &-instructors {
+    grid-row: 4;
+    grid-column: 1;
+    @include breakpoint-down(medium) {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    > h4 {
+      color: #383838;
+      font-weight: 700;
+      margin: 20px 0px;
+      @include breakpoint-down(medium) {
+        font-size: 18px;
+      }
+    }
+    &-all {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 1450px) {
+        width: 90%;
+      }
+      @include breakpoint-down(medium) {
+        width: 90%;
+      }
+
+      &-single {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoint-down(medium) {
+          font-size: 12px;
+        }
+        > img {
+          width: 80px;
+          @include breakpoint-down(medium) {
+            width: 50px;
+          }
+        }
+        > p {
+          font-weight: 500;
+          margin: 6px 0px;
+          margin-top: 10px;
+          text-align: center;
+        }
+        > h6 {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &-detailedInfo {
+    grid-row: 5;
+    grid-column: 1;
+    @include breakpoint-down(medium) {
+      grid-row: 5;
+      grid-column: 1;
+    }
+    margin-top: 20px;
+
+    @include breakpoint-down(medium) {
+      max-width: 1000px;
+      min-width: 350px;
+    }
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+    
+      padding-bottom: 10px;
+      border-bottom: 1px solid #c1c5cb;
+      @include breakpoint-down(medium) {
+        overflow-x: scroll;
+      }
+
+      .isActive{
+        color: #383838;
+        font-weight: 700;
+        position: relative;
+        
+      }
+      .isActive:after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0;
+        height: 4px;
+        bottom:-12px;
+      
+        background-color: #101010;
+       
+
+      }
+      > p {
+        
+   
+        cursor: pointer;
+        color: #c1c5cb;
+        font-weight: 500;
+        font-size: 20px;
+        white-space: nowrap;
+
+        @include breakpoint-down(medium) {
+          font-size: 16px;
+          margin-right: 20px;
+        }
+      }
+      > p:first-child {
+        @include breakpoint-down(medium) {
+         
+        }
+      }
+    }
+    &-description {
+      margin-top: 20px;
+    }
+  }
+  &-info {
+    grid-row: 3 / span 5;
+    grid-column: 2;
+    @include breakpoint-down(medium) {
+      grid-row: 4;
+      grid-column: 1;
+    }
+    margin-left: 20px;
+    @include breakpoint-down(medium) {
+      margin-left: 0px;
+      max-width: 1000px;
+      min-width: 350px;
+      margin: 20px 0px;
+    }
+
+    &-cards {
+      display: grid;
+      grid-template-columns: 140px 140px 140px;
+      grid-template-rows: 120px 120px;
+      row-gap: 20px;
+      column-gap: 20px;
+      float: right;
+      margin-bottom: 20px;
+      @include breakpoint-down(medium) {
+        overflow-x: scroll;
+        float: none;
+
+        grid-template-rows: 0fr;
+        grid-template-columns: repeat(6, 1fr);
+
+        row-gap: 0;
+        column-gap: 12px;
+      }
+
+      &-single {
+        background-color: #e6f7fc;
+        color: #00a9dc;
+        width: 140px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        @include breakpoint-down(medium) {
+          width: 90px;
+          height: 70px;
+        }
+
+        > h4 {
+          text-align: center;
+          @include breakpoint-down(medium) {
+            font-size: 16px;
+          }
+        }
+        > p {
+          text-align: center;
+          @include breakpoint-down(medium) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .contents{
+      @include breakpoint-down(medium){
+        display: none;
+      }
+    }
+  }
+}
+
+
+.courseContent{
+  >h4{
+
+    
+  
+ }
+  &-items{
+    margin-top: 30px;
+    &-single{
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-title{
+        display: flex;
+        align-items: center;
+        >img{
+          width: 16px;
+        }
+        >p{
+          margin-left: 20px;
+        }
+      }
+      >p{
+
+      }
+    }
+  }
+}
